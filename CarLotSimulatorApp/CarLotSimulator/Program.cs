@@ -28,6 +28,45 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+            
+
+            var dealership = new CarLot();
+            
+            Car car1 = new Car();
+            car1.Make = "Dodge";
+            car1.Year = 2015;
+            car1.Model = "Challenger";
+            car1.EngineNoise = "Loud";
+            car1.HonkNoise = "Loud";
+            car1.IsDrivable = false;
+            dealership.Cars.Add(car1);
+
+            Car car2 = new Car("Toyota", "Prius", 2022, "Silent", "Medium", true);
+            dealership.Cars.Add(car2);
+
+            Car car3 = new Car()
+            {
+                Make = "Acura",
+                Model = "TL",
+                EngineNoise = "Loud",
+                Year = 2015,
+                HonkNoise = "Quiet",
+                IsDrivable = true
+            };
+            dealership.Cars.Add(car3);
+            
+            car1.MakeEngineNoise(car1.EngineNoise);
+            car1.MakeHonkNoise(car1.HonkNoise);
+                
+            car2.MakeHonkNoise(car2.HonkNoise);
+            car2.MakeEngineNoise(car2.EngineNoise);
+            
+            car3.MakeEngineNoise(car3.EngineNoise);
+            car3.MakeHonkNoise(car3.HonkNoise);
+            
+            dealership.DisplayCars();
+
+
         }
     }
 }
