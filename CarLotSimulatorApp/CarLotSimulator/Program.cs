@@ -40,9 +40,12 @@ namespace CarLotSimulator
             car1.HonkNoise = "Loud";
             car1.IsDrivable = false;
             dealership.Cars.Add(car1);
+            Console.WriteLine($"amount of cars in car lot: {CarLot.NumberOfCars}");
 
             Car car2 = new Car("Toyota", "Prius", 2022, "Silent", "Medium", true);
             dealership.Cars.Add(car2);
+            Console.WriteLine($"amount of cars in car lot: {CarLot.NumberOfCars}");
+            
 
             Car car3 = new Car()
             {
@@ -54,6 +57,7 @@ namespace CarLotSimulator
                 IsDrivable = true
             };
             dealership.Cars.Add(car3);
+            Console.WriteLine($"amount of cars in car lot: {CarLot.NumberOfCars}");
             
             car1.MakeEngineNoise(car1.EngineNoise);
             car1.MakeHonkNoise(car1.HonkNoise);

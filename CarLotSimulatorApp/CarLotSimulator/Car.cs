@@ -23,7 +23,7 @@ public class Car
 
     public Car()
     {
-        
+        CarLot.NumberOfCars++;
     }
 
     public Car(string make, string model, int year, string engineNoise, string honkNoise, bool isDrivable)
@@ -34,6 +34,7 @@ public class Car
         EngineNoise = engineNoise;
         HonkNoise = honkNoise;
         IsDrivable = isDrivable;
-        
+        CarLot.NumberOfCars++;
+
     }
 }
